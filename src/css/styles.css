@@ -116,50 +116,119 @@ button {
     font-size: 24px;
 }
 /* Media Query para dispositivos móveis */
-@media only screen and (max-width: 768px) {
-    .logo {
-        position: relative;
-        margin-top: 20px;
-        margin-left: 20px;
-        width: 120px;
-        height: 80px;
-    }
+@media only screen and (max-width: 600px) {
+   * {
+    font-family: "Poppins", sans-serif;
+    margin: 0; /* espaçamento externo */
+    padding: 0; /* espaçamento interno */
+    box-sizing: border-box; 
+}
+/* * asterísco significa TUDO, ele vai aplicar esse estilo para tudo */
 
-    .item {
-        padding: 20px;
-    }
+html {
+    scroll-snap-type: y mandatory;
+}
 
-    h1 {
-        font-size: 36px;
-    }
+video, .img-tesla {
+     width: 100%; /* LARGURA */
+     height: 100%; /* ALTURA */
+     position: absolute; /* POSICIONAR O ITEM NUMA POSIÇÃO EXATA QUE EU DESEJAR */
+     top: 0;
+     left: 0;
+     z-index: -1; /* DEFINE QUEM FICA NA FRENTE DE QUEM */
+     object-fit: cover;/* FAZ COM QUE O VIDEO CUBRA TODA A TELA  */
+     filter: brightness(60%);
+}
+ 
+.logo {
+    filter: brightness(100);
+    position: fixed;
+    width: 120px;
+    height: 80px;
+}
 
-    .sub-titulo {
-        font-size: 14px;
-    }
+.item {
+    display: flex; /* HABILITA ALGUMAS PROPRIEDADES CSS */
 
-    button {
-        padding: 7px 40px;
-        font-size: 14px;
-    }
+    justify-content: space-between; /* CRIA UM ESPAÇAMENTO ENTRE OS ITENS */
+    flex-direction: column; /* DEIXAR UM ITEM DEBAIXO DO OUTRO */
 
-    .texto-rodape {
-        font-size: 10px;
-    }
+    position: relative;
+    height: 100vh; /* TELA TODA - ALTURA */
+    width: 100vw; /* TELA TODA - LARGURA */
+    scroll-snap-align: start;
+}
 
-    .galeria {
-        padding: 10px;
-        gap: 10px;
-    }
+h1 {
+    color: white;
+    font-size: 50px;
+}
 
-    .galeria img {
-        border: 1px solid #ddd;
-    }
+.sub-titulo {
+    color: white;
+}
 
-    .voltar {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
+.info-orquidea {
+    margin-top: 80px;
+    text-align: center;
+}
 
-    .header h1 {
-        font-size: 20px;
-    }
+.rodape {
+    text-align: center; /* ALINHA MEU ITEM AO CENTRO */
+}
+
+button {
+    background-color: rgba(34, 34, 34, 0.8);
+    color: white;
+    padding: 7px 80px;
+    border-radius: 5px; /* ARREDONDA A BORDA DO BOTÃO */
+    border: none; /* TIRA A BORDA DO BOTÃO */
+    cursor: pointer; /* COLOCA A MÃOSINHA NO LUGAR DO MOUSE */
+}
+
+.test-orquidea {
+    color: black;
+    background-color: white;
+}
+
+.texto-rodape {
+    color: white;
+    font-size: 12px; /* TAMANHO DO TEXTO */
+    margin-top: 10px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 20px;
+}
+.galeria img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+.voltar {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
