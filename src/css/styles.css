@@ -141,7 +141,7 @@ video, .img-tesla {
 }
  
 .logo {
-    filter: brightness(100);
+    filter: brightness(50);
     position: fixed;
     width: 120px;
     height: 80px;
