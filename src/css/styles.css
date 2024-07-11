@@ -115,3 +115,51 @@ button {
     margin: 0;
     font-size: 24px;
 }
+/* Media Query para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    .logo {
+        position: relative;
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 120px;
+        height: 80px;
+    }
+
+    .item {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .sub-titulo {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 7px 40px;
+        font-size: 14px;
+    }
+
+    .texto-rodape {
+        font-size: 10px;
+    }
+
+    .galeria {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .galeria img {
+        border: 1px solid #ddd;
+    }
+
+    .voltar {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
